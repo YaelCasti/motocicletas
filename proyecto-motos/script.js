@@ -21,4 +21,15 @@ $(document).ready(function(){
     $('#ir-arriba').click(function(){
         $('html, body').animate({scrollTop: 0}, 'slow');
     });
+
+    // Envío del formulario de contacto con mensaje de confirmación
+    $('#formulario-contacto').on('submit', function(event) {
+        event.preventDefault(); // Evita el envío del formulario automáticamente
+
+        // Simulación de éxito sin servidor
+        alert('¡Formulario enviado correctamente!');
+
+        // Restablece el formulario
+        $(this)[0].reset();
+    });
 });
