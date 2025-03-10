@@ -18,18 +18,7 @@ $(document).ready(function(){
     });
 
     // Botón para ir arriba
-    $('#ir-arriba').click(function() {
+    $('#ir-arriba').click(function(){
         $('html, body').animate({scrollTop: 0}, 'slow');
-    });
-
-    // Envío del formulario de contacto con mensaje de confirmación
-    $('#formulario-contacto').submit(function(event) {
-        event.preventDefault(); // Evita el envío del formulario de forma predeterminada
-
-        // Mostrar mensaje de éxito
-        alert('¡Formulario enviado correctamente!');
-
-        // Restablecer el formulario
-        $('#formulario-contacto')[0].reset();
     });
 });
