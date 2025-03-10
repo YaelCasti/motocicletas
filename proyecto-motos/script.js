@@ -17,6 +17,11 @@ $(document).ready(function(){
         pause: 3000 
     });
 
+    // Botón para ir arriba
+    $('#ir-arriba').click(function() {
+        $('html, body').animate({scrollTop: 0}, 'slow');
+    });
+
     // Envío del formulario de contacto con mensaje de confirmación
     $('#formulario-contacto').submit(function(event) {
         event.preventDefault(); // Evita el envío del formulario de forma predeterminada
