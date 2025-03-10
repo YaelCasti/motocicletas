@@ -17,19 +17,14 @@ $(document).ready(function(){
         pause: 3000 
     });
 
-    // Botón para ir arriba
-    $('#ir-arriba').click(function(){
-        $('html, body').animate({scrollTop: 0}, 'slow');
-    });
-
     // Envío del formulario de contacto con mensaje de confirmación
-    $('#formulario-contacto').on('submit', function(event) {
-        event.preventDefault(); // Evita el envío del formulario automáticamente
+    $('#formulario-contacto').submit(function(event) {
+        event.preventDefault(); // Evita el envío del formulario de forma predeterminada
 
-        // Simulación de éxito sin servidor
+        // Mostrar mensaje de éxito
         alert('¡Formulario enviado correctamente!');
 
-        // Restablece el formulario
-        $(this)[0].reset();
+        // Restablecer el formulario
+        $('#formulario-contacto')[0].reset();
     });
 });
